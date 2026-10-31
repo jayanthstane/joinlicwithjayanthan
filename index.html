@@ -1452,25 +1452,46 @@
         return;
       }
 
-      applicantNameDisplay.textContent = name;
+    applicantNameDisplay.textContent = name;
 
-      // Construct WhatsApp message with applicant information
-      const waMessage = `Hello Jayanthan Sir, I have submitted my agent application:%0A%0A` +
-        `*Name:* ${encodeURIComponent(name)}%0A` +
-        `*Phone:* ${encodeURIComponent(phone)}%0A` +
-        `*City:* ${encodeURIComponent(city)}%0A` +
-        `*Occupation:* ${encodeURIComponent(occupation)}%0A` +
-        `*Education:* ${encodeURIComponent(education)}%0A` +
-        `*Primary Goal:* ${encodeURIComponent(motivation)}%0A%0A` +
-        `Please guide me on the next IC-38 exam training batch.`;
+    // 1. Silent backup to your Google Sheet
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzZcvXzjHFeEc-oJXXyiVwPte9h6jTWzLhWgpCvN5l8SKNHqVRtnSIIsRhw1uu2Y01_/exec";
+    const leadPayload = {
+      fullName: name,
+      mobile: phone,
+      city: city,
+      qualification: education,
+      occupation: occupation,
+      notes: `Email: ${email} | Motivation: ${motivation}`
+    };
 
-      whatsAppDirectAction.href = `https://wa.me/917200170772?text=${waMessage}`;
-
-      // Transition Views
-      appForm.classList.add('hidden');
-      successState.classList.remove('hidden');
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(leadPayload)
     });
 
+    // 2. Prepare WhatsApp message with your number
+    const waMessage = `Hello Jayanthan Sir, I have submitted my agent application:%0A%0A` +
+      `*Name:* ${encodeURIComponent(name)}%0A` +
+      `*Phone:* ${encodeURIComponent(phone)}%0A` +
+      `*City:* ${encodeURIComponent(city)}%0A` +
+      `*Occupation:* ${encodeURIComponent(occupation)}%0A` +
+      `*Education:* ${encodeURIComponent(education)}%0A` +
+      `*Primary Goal:* ${encodeURIComponent(motivation)}%0A%0A` +
+      `Please guide me on the next IC-38 exam training batch.`;
+
+    const waUrl = `https://wa.me/917200170772?text=${waMessage}`;
+    whatsAppDirectAction.href = waUrl;
+
+    // Automatically open WhatsApp
+    window.open(waUrl, '_blank');
+
+    // 3. Update view
+    appForm.classList.add('hidden');
+    successState.classList.remove('hidden');
+  });
     function resetApplicationForm() {
       appForm.reset();
       appForm.classList.remove('hidden');
