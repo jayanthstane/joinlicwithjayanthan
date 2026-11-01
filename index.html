@@ -67,21 +67,23 @@
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     }
   </style>
-  <body class="bg-brand-surface text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+</head>
+<body class="bg-brand-surface text-slate-800 antialiased font-sans flex flex-col min-h-screen">
 
   <!-- Main Sticky Navbar -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300 shadow-sm" id="mainNav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4.5rem] py-2 flex items-center justify-between gap-2">
       <!-- Brand Logo / Identity -->
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-navy to-brand-primary flex items-center justify-center text-amber-400 shadow-md shadow-brand-navy/20 shrink-0">
-          <i class="fa-solid fa-shield-halved text-xl"></i>
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brand-navy to-brand-primary flex items-center justify-center text-amber-400 shadow-md shadow-brand-navy/20 shrink-0">
+          <i class="fa-solid fa-shield-halved text-lg sm:text-xl"></i>
         </div>
-        <div>
-          <span class="block font-serif text-lg sm:text-xl font-bold tracking-tight text-brand-navy">
-            Jayanthan, <span class="text-xs font-sans tracking-widest uppercase bg-amber-100 text-amber-800 px-2 py-0.5 rounded ml-1 font-semibold">Development Officer</span>
-          </span>
-          <span class="block text-xs font-medium text-slate-500 tracking-wide">Elite Agency Development Team</span>
+        <div class="min-w-0">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="font-serif text-base sm:text-xl font-bold tracking-tight text-brand-navy whitespace-nowrap">Jayanthan,</span>
+            <span class="text-[10px] sm:text-xs font-sans tracking-wider uppercase bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-semibold whitespace-nowrap">Development Officer</span>
+          </div>
+          <span class="block text-[11px] sm:text-xs font-medium text-slate-500 tracking-wide truncate">Elite Agency Development Team</span>
         </div>
       </a>
 
@@ -97,12 +99,12 @@
       </div>
 
       <!-- Action Buttons -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5 shrink-0">
         <a href="https://wa.me/917200170772?text=Hello%20Jayanthan%20Sir%2C%20I%20am%20interested%20in%20becoming%20a%20Life%20Insurance%20Advisor.%20Please%20guide%20me." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 px-3.5 py-2 rounded-lg text-xs font-bold transition-all border border-emerald-200">
           <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
           <span>Direct WhatsApp</span>
         </a>
-        <a href="#apply" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-navy to-brand-primary hover:from-brand-dark hover:to-brand-navy text-amber-300 font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm shadow-md shadow-brand-navy/25 hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+        <a href="#apply" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-navy to-brand-primary hover:from-brand-dark hover:to-brand-navy text-amber-300 font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm shadow-md transition-all whitespace-nowrap">
           <span>Apply to Join</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
@@ -110,11 +112,11 @@
     </div>
   </nav>
 
-  <!-- New Batch Announcement Bar (Placed Below Navbar) -->
-  <div class="bg-gradient-to-r from-brand-navy via-brand-dark to-brand-navy text-amber-200 text-xs sm:text-sm py-2.5 px-4 border-b border-amber-500/20 text-center font-medium shadow-inner">
+  <!-- New Batch Announcement Bar (Directly Under Navbar) -->
+  <div class="relative z-40 bg-gradient-to-r from-slate-900 via-brand-dark to-slate-900 text-amber-200 text-xs sm:text-sm py-2.5 px-4 border-b border-amber-500/30 text-center font-medium shadow-md">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
-      <span class="bg-amber-500/20 text-amber-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-amber-400/30 shrink-0">NEW BATCH</span>
-      <span class="tracking-wide">Next IRDAI IC-38 Pre-Licensing Guidance Cohort starting soon. Limited seats available!</span>
+      <span class="bg-amber-400/20 text-amber-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-amber-400/40 shrink-0">NEW BATCH</span>
+      <span class="tracking-wide text-slate-100">Next IRDAI IC-38 Pre-Licensing Guidance Cohort starting soon. <strong class="text-amber-300 font-semibold">Limited seats available!</strong></span>
     </div>
   </div>
 
@@ -210,13 +212,13 @@
             </div>
 
             <div class="flex items-center gap-4 mb-6">
-            <div class="w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-amber-400 shadow-md shrink-0">
-  <img 
-    src="JAYANTHANOFFICEIMAGE.jpeg" 
-    alt="Jayanthan - Development Officer" 
-    class="w-full h-full object-cover object-top"
-  />
-</div>
+              <div class="w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-amber-400 shadow-md shrink-0">
+                <img 
+                  src="JAYANTHANOFFICEIMAGE.jpeg" 
+                  alt="Jayanthan - Development Officer" 
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
               <div>
                 <h3 class="text-xl font-bold text-white">Jayanthan</h3>
                 <p class="text-xs text-amber-400 font-semibold uppercase tracking-wider">Development Officer</p>
@@ -266,130 +268,121 @@
     </div>
   </section>
 
-<!-- ==============================================
-     FRONT PAGE: MENTOR PROFILE & WHY CHOOSE LIC
-     ============================================== -->
-<section id="leader-and-lic" class="py-14 bg-slate-50 border-b border-slate-200">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-    
-    <!-- 1. Development Officer Profile Card -->
-    <div class="bg-gradient-to-br from-slate-900 to-brand-navy rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-slate-800">
-      <div class="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
-        
-        <!-- Profile Photo -->
-        <div class="relative shrink-0">
-          <div class="w-36 h-36 sm:w-40 sm:h-40 rounded-2xl overflow-hidden ring-4 ring-amber-400/80 shadow-2xl bg-slate-800">
-            <img 
-              src="JAYANTHANOFFICEIMAGE.jpeg" 
-              alt="J. Jayanthan - LIC Development Officer" 
-              class="w-full h-full object-cover object-top"
-              onerror="this.src='https://ui-avatars.com/api/?name=J+Jayanthan&background=0b192c&color=fbbf24&size=256'"
-            />
-          </div>
-          <div class="absolute -bottom-2 -right-2 bg-emerald-500 text-white px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1.5 text-[11px] font-bold border-2 border-slate-900">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Authorized DO</span>
-          </div>
-        </div>
-
-        <!-- DO Details -->
-        <div class="flex-1 text-center md:text-left space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/10 border border-amber-400/30 rounded-full text-amber-400 text-xs font-bold uppercase tracking-wider">
-            <i class="fa-solid fa-shield"></i> Life Insurance Corporation of India
-          </div>
+  <!-- Front Page: Mentor Profile & Why Choose LIC -->
+  <section id="leader-and-lic" class="py-14 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- 1. Development Officer Profile Card -->
+      <div class="bg-gradient-to-br from-slate-900 to-brand-navy rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-slate-800">
+        <div class="flex flex-col md:flex-row items-center gap-6 sm:gap-8">
           
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-serif">
-            J. Jayanthan
+          <!-- Profile Photo -->
+          <div class="relative shrink-0">
+            <div class="w-36 h-36 sm:w-40 sm:h-40 rounded-2xl overflow-hidden ring-4 ring-amber-400/80 shadow-2xl bg-slate-800">
+              <img 
+                src="JAYANTHANOFFICEIMAGE.jpeg" 
+                alt="J. Jayanthan - LIC Development Officer" 
+                class="w-full h-full object-cover object-top"
+                onerror="this.src='https://ui-avatars.com/api/?name=J+Jayanthan&background=0b192c&color=fbbf24&size=256'"
+              />
+            </div>
+            <div class="absolute -bottom-2 -right-2 bg-emerald-500 text-white px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1.5 text-[11px] font-bold border-2 border-slate-900">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Authorized DO</span>
+            </div>
+          </div>
+
+          <!-- DO Details -->
+          <div class="flex-1 text-center md:text-left space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/10 border border-amber-400/30 rounded-full text-amber-400 text-xs font-bold uppercase tracking-wider">
+              <i class="fa-solid fa-shield"></i> Life Insurance Corporation of India
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-serif">
+              J. Jayanthan
+            </h2>
+            
+            <p class="text-sm sm:text-base text-slate-300 font-medium">
+              Development Officer | Agency Growth & Talent Mentor
+            </p>
+
+            <!-- Credential Badges -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
+              <div class="bg-white/5 border border-white/10 rounded-xl p-2.5">
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 block font-semibold">DO Code</span>
+                <span class="text-sm font-bold text-amber-300">503546</span>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-2.5">
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 block font-semibold">Branch</span>
+                <span class="text-sm font-bold text-white">Thiruvarur (75D)</span>
+              </div>
+              <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 col-span-2 sm:col-span-1">
+                <span class="text-[11px] uppercase tracking-wider text-slate-400 block font-semibold">Division</span>
+                <span class="text-sm font-bold text-white">Thanjavur Division</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2. Why Choose LIC Section -->
+      <div>
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-blue-900 bg-blue-100 rounded-full mb-2">
+            Sovereign Trust & Heritage
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-serif">
+            Why Choose LIC of India?
           </h2>
-          
-          <p class="text-sm sm:text-base text-slate-300 font-medium">
-            Development Officer | Agency Growth & Talent Mentor
+          <p class="mt-3 text-base text-slate-600">
+            When you begin your financial advisory career, you represent India's most trusted statutory financial institution, backed by the Parliament of India under the LIC Act of 1956.
           </p>
-
-          <!-- Credential Badges -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-2.5">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 block font-semibold">DO Code</span>
-              <span class="text-sm font-bold text-amber-300">503546</span>
-            </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-2.5">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 block font-semibold">Branch</span>
-              <span class="text-sm font-bold text-white">Thiruvarur (75D)</span>
-            </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-2.5 col-span-2 sm:col-span-1">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 block font-semibold">Division</span>
-              <span class="text-sm font-bold text-white">Thanjavur Division</span>
-            </div>
-          </div>
         </div>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-amber-50 text-amber-600 text-xl">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="text-2xl font-black text-brand-navy">Section 37</div>
+            <div class="text-xs uppercase tracking-wide text-slate-500 font-bold mt-1">Sovereign Guarantee</div>
+            <p class="text-xs text-slate-600 mt-2">Sum assured and all declared bonuses are 100% guaranteed by the Government of India.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-blue-50 text-blue-700 text-xl">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="text-2xl font-black text-brand-navy">₹50+ Lakh Cr</div>
+            <div class="text-xs uppercase tracking-wide text-slate-500 font-bold mt-1">Financial Scale</div>
+            <p class="text-xs text-slate-600 mt-2">One of the world's largest asset managers, fueling nation-building infrastructure.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 text-xl">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <div class="text-2xl font-black text-brand-navy">98.5%+</div>
+            <div class="text-xs uppercase tracking-wide text-slate-500 font-bold mt-1">Claim Settlement</div>
+            <p class="text-xs text-slate-600 mt-2">Benchmark claim settlement ratio that gives clients absolute confidence in your advisory.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 text-xl">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="text-2xl font-black text-brand-navy">#1 Market Leader</div>
+            <div class="text-xs uppercase tracking-wide text-slate-500 font-bold mt-1">Brand Recognition</div>
+            <p class="text-xs text-slate-600 mt-2">Synonymous with life insurance in India—doors open easily with zero cold introduction friction.</p>
+          </div>
+
+        </div>
       </div>
+
     </div>
-
-    <!-- 2. Why Choose LIC Section -->
-    <div>
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-blue-900 bg-blue-100 rounded-full mb-2">
-          Sovereign Trust & Heritage
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-serif">
-          Why Choose LIC of India?
-        </h2>
-        <p class="mt-3 text-base text-slate-600">
-          When you begin your financial advisory career, you represent India's most trusted statutory financial institution, backed by the Parliament of India under the LIC Act of 1956.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Sovereign Guarantee -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-amber-50 text-amber-600 text-xl">
-            <i class="fa-solid fa-shield-halved"></i>
-          </div>
-          <div class="text-2xl font-black text-brand-navy">Section 37</div>
-          <div class="text-xs uppercase tracking-wide text-slate-500 font-bold mt-1">Sovereign Guarantee</div>
-          <p class="text-xs text-slate-600 mt-2">Sum assured and all declared bonuses are 100% guaranteed by the Government of India.</p>
-        </div>
-
-        <!-- Assets Under Management -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-blue-50 text-blue-700 text-xl">
-            <i class="fa-solid fa-building-columns"></i>
-          </div>
-          <div class="text-2xl font-black text-brand-navy">₹50+ Lakh Cr</div>
-          <div class="text-xs uppercase tracking-wide text-slate-500 font-bold mt-1">Financial Scale</div>
-          <p class="text-xs text-slate-600 mt-2">One of the world's largest asset managers, fueling nation-building infrastructure.</p>
-        </div>
-
-        <!-- Claim Settlement -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 text-xl">
-            <i class="fa-solid fa-hand-holding-dollar"></i>
-          </div>
-          <div class="text-2xl font-black text-brand-navy">98.5%+</div>
-          <div class="text-xs uppercase tracking-wide text-slate-500 font-bold mt-1">Claim Settlement</div>
-          <p class="text-xs text-slate-600 mt-2">Benchmark claim settlement ratio that gives clients absolute confidence in your advisory.</p>
-        </div>
-
-        <!-- Market Dominance -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 text-xl">
-            <i class="fa-solid fa-trophy"></i>
-          </div>
-          <div class="text-2xl font-black text-brand-navy">#1 Market Leader</div>
-          <div class="text-xs uppercase tracking-wide text-slate-500 font-bold mt-1">Brand Recognition</div>
-          <p class="text-xs text-slate-600 mt-2">Synonymous with life insurance in India—doors open easily with zero cold introduction friction.</p>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- ============================================== -->
-
-  
+  </section>
 
   <!-- Interactive Commission & Earnings Calculator Section -->
   <section id="calculator" class="py-20 bg-slate-100 border-b border-slate-200">
@@ -437,8 +430,6 @@
               <span>₹1,50,000 (HNI Term/Endowment)</span>
             </div>
           </div>
-
-        
         </div>
 
         <!-- Calculated Output Dashboard (Right) -->
@@ -473,7 +464,6 @@
                 <i class="fa-solid fa-crown text-amber-400"></i>
                 <span id="tierTitle">Elite Club Contender</span>
               </div>
-              <!-- Qualification Metrics Mini Bar -->
               <div class="mt-3 bg-black/25 rounded-xl p-3 border border-white/10 text-xs space-y-1.5">
                 <div class="flex justify-between text-slate-300">
                   <span>Lives (Policies/Yr): <strong id="calcLivesCount" class="text-white">48</strong></span>
@@ -520,12 +510,8 @@
         </div>
       </div>
 
-      <!-- Interactive Club Cards Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="milestoneCardsGrid">
-        <!-- Rendered dynamically by JavaScript -->
-      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="milestoneCardsGrid"></div>
 
-      <!-- Additional Privileges Callout -->
       <div class="mt-12 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-start gap-4">
           <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shrink-0">
@@ -545,8 +531,7 @@
 
   <!-- Edit Milestone Configuration Modal -->
   <div id="milestoneModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden animate-fade-in">
-      <!-- Modal Header -->
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
       <div class="bg-gradient-to-r from-brand-navy to-brand-primary p-6 text-white flex items-center justify-between">
         <div>
           <h3 class="text-lg font-bold">Customize Milestone & Club Targets</h3>
@@ -557,12 +542,8 @@
         </button>
       </div>
 
-      <!-- Modal Body (Form) -->
-      <div class="p-6 overflow-y-auto space-y-6" id="milestoneEditorForm">
-        <!-- Rendered dynamically by JavaScript -->
-      </div>
+      <div class="p-6 overflow-y-auto space-y-6" id="milestoneEditorForm"></div>
 
-      <!-- Modal Footer -->
       <div class="bg-slate-50 px-6 py-4 border-t border-slate-200 flex items-center justify-between gap-3">
         <button type="button" onclick="resetMilestonesToDefault()" class="text-xs font-semibold text-slate-500 hover:text-rose-600 flex items-center gap-1.5">
           <i class="fa-solid fa-rotate-left"></i> Restore Default Club Rules
@@ -589,7 +570,6 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Benefit 1 -->
         <div class="p-8 rounded-2xl bg-brand-surface border border-slate-200 hover:border-amber-400/60 hover:shadow-xl transition-all duration-300 group">
           <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl group-hover:bg-amber-500 group-hover:text-white transition-colors duration-300 mb-6">
             <i class="fa-solid fa-chart-line"></i>
@@ -600,7 +580,6 @@
           </p>
         </div>
 
-        <!-- Benefit 2 -->
         <div class="p-8 rounded-2xl bg-brand-surface border border-slate-200 hover:border-amber-400/60 hover:shadow-xl transition-all duration-300 group">
           <div class="w-14 h-14 rounded-2xl bg-blue-100 text-brand-primary flex items-center justify-center text-2xl group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300 mb-6">
             <i class="fa-solid fa-umbrella"></i>
@@ -611,7 +590,6 @@
           </p>
         </div>
 
-        <!-- Benefit 3 -->
         <div class="p-8 rounded-2xl bg-brand-surface border border-slate-200 hover:border-amber-400/60 hover:shadow-xl transition-all duration-300 group">
           <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300 mb-6">
             <i class="fa-solid fa-user-clock"></i>
@@ -622,7 +600,6 @@
           </p>
         </div>
 
-        <!-- Benefit 4 -->
         <div class="p-8 rounded-2xl bg-brand-surface border border-slate-200 hover:border-amber-400/60 hover:shadow-xl transition-all duration-300 group">
           <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300 mb-6">
             <i class="fa-solid fa-plane-up"></i>
@@ -633,7 +610,6 @@
           </p>
         </div>
 
-        <!-- Benefit 5 -->
         <div class="p-8 rounded-2xl bg-brand-surface border border-slate-200 hover:border-amber-400/60 hover:shadow-xl transition-all duration-300 group">
           <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-2xl group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300 mb-6">
             <i class="fa-solid fa-handshake-angle"></i>
@@ -644,7 +620,6 @@
           </p>
         </div>
 
-        <!-- Benefit 6 -->
         <div class="p-8 rounded-2xl bg-brand-surface border border-slate-200 hover:border-amber-400/60 hover:shadow-xl transition-all duration-300 group">
           <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 mb-6">
             <i class="fa-solid fa-laptop-code"></i>
@@ -667,7 +642,6 @@
         <p class="text-slate-600 mt-3 text-base">You do not need previous financial sales experience. If you enjoy interacting with people and have a hunger to grow, you are an ideal candidate.</p>
       </div>
 
-      <!-- Eligibility criteria badge bar -->
       <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 mb-12 flex flex-wrap items-center justify-around gap-4 text-center">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
@@ -699,14 +673,12 @@
           </div>
           <div class="text-left">
             <div class="text-xs text-slate-400 uppercase font-semibold">Regulatory Requirement</div>
-            <div class="text-sm font-bold text-brand-navy">PAN Card & Aadhaar Card</div>
+            <div class="text-sm font-bold text-brand-navy">Identity Proof & PAN Card</div>
           </div>
         </div>
       </div>
 
-      <!-- Ideal Profiles Cards -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
         <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all">
           <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center text-xl mb-4">
             <i class="fa-solid fa-house-chimney-user"></i>
@@ -746,7 +718,6 @@
             Bank managers, defense personnel, and teachers with vast trust networks can easily leverage their goodwill into respected retirement income.
           </p>
         </div>
-
       </div>
     </div>
   </section>
@@ -761,8 +732,6 @@
       </div>
 
       <div class="grid md:grid-cols-4 gap-6 relative">
-        
-        <!-- Step 1 -->
         <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative group hover:border-amber-400 transition-colors">
           <div class="text-4xl font-black text-amber-400/30 group-hover:text-amber-400 transition-colors mb-3">01</div>
           <h3 class="text-lg font-bold text-white mb-2">Registration & Screening</h3>
@@ -774,7 +743,6 @@
           </div>
         </div>
 
-        <!-- Step 2 -->
         <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative group hover:border-amber-400 transition-colors">
           <div class="text-4xl font-black text-amber-400/30 group-hover:text-amber-400 transition-colors mb-3">02</div>
           <h3 class="text-lg font-bold text-white mb-2">Digital Training Module</h3>
@@ -786,7 +754,6 @@
           </div>
         </div>
 
-        <!-- Step 3 -->
         <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative group hover:border-amber-400 transition-colors">
           <div class="text-4xl font-black text-amber-400/30 group-hover:text-amber-400 transition-colors mb-3">03</div>
           <h3 class="text-lg font-bold text-white mb-2">Clear IC-38 Online Exam</h3>
@@ -798,7 +765,6 @@
           </div>
         </div>
 
-        <!-- Step 4 -->
         <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative group hover:border-amber-400 transition-colors">
           <div class="text-4xl font-black text-amber-400/30 group-hover:text-amber-400 transition-colors mb-3">04</div>
           <h3 class="text-lg font-bold text-white mb-2">Appointment & First Sales</h3>
@@ -809,10 +775,8 @@
             <i class="fa-solid fa-trophy"></i> Ready to Earn
           </div>
         </div>
-
       </div>
 
-      <!-- Callout quote -->
       <div class="mt-12 bg-white/5 border border-white/10 rounded-2xl p-6 text-center max-w-2xl mx-auto">
         <p class="text-sm text-slate-300 italic">"98.4% of candidates who take our mock drill papers pass the IC-38 examination on their very first attempt."</p>
       </div>
@@ -829,8 +793,6 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        
-        <!-- Testimonial 1 -->
         <div class="bg-brand-surface p-8 rounded-2xl border border-slate-200 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
           <div>
             <div class="flex text-amber-400 text-sm mb-4">
@@ -841,17 +803,14 @@
             </p>
           </div>
           <div class="flex items-center gap-3 mt-6 pt-6 border-t border-slate-200">
-            <div class="w-11 h-11 rounded-full bg-pink-600 text-white font-bold flex items-center justify-center text-sm">
-              PS
-            </div>
+            <div class="w-11 h-11 rounded-full bg-pink-600 text-white font-bold flex items-center justify-center text-sm">PS</div>
             <div>
               <h5 class="text-sm font-bold text-brand-navy">Kasthuri Natarajan</h5>
-              <p class="text-xs text-slate-500">Former Homemaker </p>
+              <p class="text-xs text-slate-500">Former Homemaker</p>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
         <div class="bg-brand-surface p-8 rounded-2xl border border-slate-200 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
           <div>
             <div class="flex text-amber-400 text-sm mb-4">
@@ -862,9 +821,7 @@
             </p>
           </div>
           <div class="flex items-center gap-3 mt-6 pt-6 border-t border-slate-200">
-            <div class="w-11 h-11 rounded-full bg-brand-navy text-amber-400 font-bold flex items-center justify-center text-sm">
-              RK
-            </div>
+            <div class="w-11 h-11 rounded-full bg-brand-navy text-amber-400 font-bold flex items-center justify-center text-sm">RK</div>
             <div>
               <h5 class="text-sm font-bold text-brand-navy">Karthi</h5>
               <p class="text-xs text-slate-500">Corporate Logistics</p>
@@ -872,7 +829,6 @@
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
         <div class="bg-brand-surface p-8 rounded-2xl border border-slate-200 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
           <div>
             <div class="flex text-amber-400 text-sm mb-4">
@@ -883,16 +839,13 @@
             </p>
           </div>
           <div class="flex items-center gap-3 mt-6 pt-6 border-t border-slate-200">
-            <div class="w-11 h-11 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm">
-              VN
-            </div>
+            <div class="w-11 h-11 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm">VN</div>
             <div>
               <h5 class="text-sm font-bold text-brand-navy">Shanmugam</h5>
               <p class="text-xs text-slate-500">Retired Veterinary Doctor</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -901,20 +854,15 @@
   <section id="apply" class="py-20 bg-slate-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
-        
-        <!-- Header Banner -->
         <div class="bg-gradient-to-r from-brand-navy via-brand-dark to-brand-navy p-8 sm:p-10 text-white text-center">
           <span class="inline-block bg-amber-400/20 text-amber-300 border border-amber-400/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">Confidential Application</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold font-serif">Apply to Join Our Agency Team</h2>
           <p class="text-slate-300 text-sm mt-2 max-w-lg mx-auto">Fill this short profile. We will contact you within 24 hours to schedule a confidential discussion or introductory briefing.</p>
         </div>
 
-        <!-- Form Body -->
         <div class="p-8 sm:p-10">
           <form id="agentApplicationForm" class="space-y-6">
-            
             <div class="grid sm:grid-cols-2 gap-6">
-              <!-- Full Name -->
               <div>
                 <label for="fullName" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Full Name *</label>
                 <div class="relative">
@@ -926,7 +874,6 @@
                 </div>
               </div>
 
-              <!-- Phone / WhatsApp -->
               <div>
                 <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">WhatsApp / Mobile Number *</label>
                 <div class="relative">
@@ -941,7 +888,6 @@
             </div>
 
             <div class="grid sm:grid-cols-2 gap-6">
-              <!-- Email Address -->
               <div>
                 <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Email Address *</label>
                 <div class="relative">
@@ -953,21 +899,19 @@
                 </div>
               </div>
 
-              <!-- City / Location -->
               <div>
                 <label for="city" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Current City / Town *</label>
                 <div class="relative">
                   <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
                     <i class="fa-solid fa-location-dot text-sm"></i>
                   </span>
-                  <input type="text" id="city" required placeholder="e.g. Mumbai, Pune, Lucknow" 
+                  <input type="text" id="city" required placeholder="e.g. Chennai, Madurai, Thiruvarur" 
                          class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-800">
                 </div>
               </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-6">
-              <!-- Current Occupation -->
               <div>
                 <label for="occupation" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Current Profile *</label>
                 <select id="occupation" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-800 bg-white">
@@ -982,7 +926,6 @@
                 </select>
               </div>
 
-              <!-- Education Qualification -->
               <div>
                 <label for="education" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Highest Education *</label>
                 <select id="education" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-800 bg-white">
@@ -995,7 +938,6 @@
               </div>
             </div>
 
-            <!-- Motivation -->
             <div>
               <label for="motivation" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">What is your primary goal? *</label>
               <select id="motivation" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 text-sm text-slate-800 bg-white">
@@ -1006,7 +948,6 @@
               </select>
             </div>
 
-            <!-- Submit Button -->
             <div>
               <button type="submit" id="submitBtn" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-brand-navy to-brand-primary hover:from-brand-dark hover:to-brand-navy text-amber-300 font-bold text-base shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
                 <span>Submit Candidature & Request Call</span>
@@ -1019,7 +960,6 @@
             </div>
           </form>
 
-          <!-- Success Modal State (Hidden Initially) -->
           <div id="formSuccessState" class="hidden text-center py-8 space-y-4">
             <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
               <i class="fa-solid fa-circle-check"></i>
@@ -1038,9 +978,7 @@
               </button>
             </div>
           </div>
-
         </div>
-
       </div>
     </div>
   </section>
@@ -1055,8 +993,6 @@
       </div>
 
       <div class="space-y-4" id="faqAccordion">
-        
-        <!-- FAQ 1 -->
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
           <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left font-bold text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
             <span>Can I do this career part-time alongside my existing job?</span>
@@ -1067,7 +1003,6 @@
           </div>
         </div>
 
-        <!-- FAQ 2 -->
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
           <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left font-bold text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
             <span>Is there a fixed basic salary or is it commission-based?</span>
@@ -1078,7 +1013,6 @@
           </div>
         </div>
 
-        <!-- FAQ 3 -->
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
           <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left font-bold text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
             <span>What if I have zero prior experience in sales or insurance?</span>
@@ -1089,7 +1023,6 @@
           </div>
         </div>
 
-        <!-- FAQ 4 -->
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
           <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left font-bold text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
             <span>What is the IC-38 examination like? Is it difficult?</span>
@@ -1100,7 +1033,6 @@
           </div>
         </div>
 
-        <!-- FAQ 5 -->
         <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors">
           <button type="button" class="faq-toggle w-full px-6 py-4.5 text-left font-bold text-brand-navy flex justify-between items-center hover:bg-slate-50 transition-colors">
             <span>How does the renewal royalty commission work over the years?</span>
@@ -1110,7 +1042,6 @@
             When a customer takes a 20-year policy, you earn high commission on their 1st year payment, followed by renewal commission every consecutive year they pay their premium. As your client base multiplies year over year, your renewal royalty keeps compounding, forming a stable passive cashflow.
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -1119,7 +1050,6 @@
   <footer class="bg-brand-navy text-slate-400 text-sm mt-auto border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <!-- Col 1 -->
         <div class="md:col-span-2 space-y-3">
           <div class="flex items-center gap-3 text-white">
             <div class="w-9 h-9 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold">
@@ -1137,13 +1067,12 @@
             <a href="tel:917200170772" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-amber-400 hover:text-brand-navy flex items-center justify-center text-slate-300 transition-colors">
               <i class="fa-solid fa-phone"></i>
             </a>
-            <a href="mailto:jayanthan.developmentofficer@example.com" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-amber-400 hover:text-brand-navy flex items-center justify-center text-slate-300 transition-colors">
+            <a href="mailto:jayanthanj546@licindia.com" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-amber-400 hover:text-brand-navy flex items-center justify-center text-slate-300 transition-colors">
               <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
         </div>
 
-        <!-- Col 2: Quick Links -->
         <div>
           <h4 class="text-xs uppercase font-bold tracking-wider text-slate-200 mb-3">Quick Navigation</h4>
           <ul class="space-y-2 text-xs">
@@ -1155,11 +1084,10 @@
           </ul>
         </div>
 
-        <!-- Col 3: Contact & Branch -->
         <div>
           <h4 class="text-xs uppercase font-bold tracking-wider text-slate-200 mb-3">Jayanthan J</h4>
           <div class="space-y-2 text-xs text-slate-400">
-            <p><i class="fa-solid fa-mail text-amber-400 mr-1.5"></i>jayanthanj546@licindia.com </p>
+            <p><i class="fa-solid fa-envelope text-amber-400 mr-1.5"></i>jayanthanj546@licindia.com</p>
             <p><i class="fa-solid fa-clock text-amber-400 mr-1.5"></i> Mon - Sun: 9:30 AM - 6:30 PM</p>
             <p><i class="fa-solid fa-phone text-amber-400 mr-1.5"></i> Direct: +91 72001 70772</p>
           </div>
@@ -1179,10 +1107,8 @@
 
   <!-- Script for Interactive Calculator, FAQ & Form Submission -->
   <script>
-    // Set Year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Default Milestone / Club Tier Definitions
     const DEFAULT_MILESTONES = [
       {
         id: "mdrt",
@@ -1276,7 +1202,6 @@
       }
     ];
 
-    // Load Milestones from LocalStorage or Defaults
     let activeMilestones = [];
     try {
       const stored = localStorage.getItem('agency_milestones');
@@ -1285,7 +1210,6 @@
       activeMilestones = JSON.parse(JSON.stringify(DEFAULT_MILESTONES));
     }
 
-    // Render Milestone Cards on Page
     function renderMilestoneCards() {
       const grid = document.getElementById('milestoneCardsGrid');
       if (!grid) return;
@@ -1349,7 +1273,6 @@
       }).join('');
     }
 
-    // Modal Control & Form Rendering
     function openMilestoneConfigModal() {
       const modal = document.getElementById('milestoneModal');
       const form = document.getElementById('milestoneEditorForm');
@@ -1392,7 +1315,6 @@
         if (livesInput) m.minLives = Math.max(0, parseInt(livesInput.value, 10) || 0);
       });
 
-      // Sort descending by minCommission
       activeMilestones.sort((a, b) => b.minCommission - a.minCommission);
 
       try {
@@ -1414,7 +1336,6 @@
       closeMilestoneConfigModal();
     }
 
-    // Calculator Elements
     const policiesSlider = document.getElementById('policiesSlider');
     const premiumSlider = document.getElementById('premiumSlider');
     const policiesDisplay = document.getElementById('policiesDisplay');
@@ -1441,30 +1362,25 @@
       const policiesPerMonth = parseInt(policiesSlider.value, 10);
       const avgPremium = parseInt(premiumSlider.value, 10);
 
-      // Update Labels
       policiesDisplay.textContent = `${policiesPerMonth} Policies / mo`;
       premiumDisplay.textContent = formatINR(avgPremium);
 
       const annualPolicies = policiesPerMonth * 12;
       const totalFirstYearPremium = annualPolicies * avgPremium;
 
-      // 1st Year Commission (~25% average benchmark for life products)
       const firstYearComm = Math.round(totalFirstYearPremium * 0.25);
       const monthlyComm = Math.round(firstYearComm / 12);
 
-      // Compounded Renewal in Year 3 (Assuming ~85% persistency rate and 7.5% renewal commission)
       const yr2Renewals = (totalFirstYearPremium * 0.85) * 0.075;
       const yr3Renewals = (totalFirstYearPremium * 0.75) * 0.075;
       const totalYear3Renewal = Math.round(yr2Renewals + yr3Renewals);
 
-      // DOM Updates
       firstYearTotal.textContent = formatINR(firstYearComm);
       monthlyEstimate.textContent = `${formatINR(monthlyComm)}`;
       compoundedRenewal.textContent = `${formatINR(totalYear3Renewal)} / yr`;
       if (calcLivesCount) calcLivesCount.textContent = annualPolicies;
 
-      // Dynamic Milestone Evaluation based on customizable activeMilestones array
-      let qualifiedTier = activeMilestones[activeMilestones.length - 1]; // lowest fallback
+      let qualifiedTier = activeMilestones[activeMilestones.length - 1];
       let nextTier = null;
 
       for (let i = 0; i < activeMilestones.length; i++) {
@@ -1476,7 +1392,6 @@
         }
       }
 
-      // If didn't qualify top tiers, see who next tier is
       if (!nextTier && qualifiedTier === activeMilestones[activeMilestones.length - 1]) {
         if (firstYearComm < qualifiedTier.minCommission || annualPolicies < qualifiedTier.minLives) {
           nextTier = qualifiedTier;
@@ -1503,7 +1418,6 @@
         if (calcTierStatus) calcTierStatus.textContent = "Qualified";
       }
 
-      // Next tier progress calculation
       if (nextTier) {
         const commGap = Math.max(0, nextTier.minCommission - firstYearComm);
         const livesGap = Math.max(0, nextTier.minLives - annualPolicies);
@@ -1527,11 +1441,9 @@
     policiesSlider.addEventListener('input', calculateEarnings);
     premiumSlider.addEventListener('input', calculateEarnings);
 
-    // Initial setup
     renderMilestoneCards();
     calculateEarnings();
 
-    // Accordion Logic
     const faqButtons = document.querySelectorAll('.faq-toggle');
     faqButtons.forEach(button => {
       button.addEventListener('click', () => {
@@ -1539,7 +1451,6 @@
         const icon = button.querySelector('i');
         const isHidden = content.classList.contains('hidden');
 
-        // Close others for clean UX
         document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
         document.querySelectorAll('.faq-toggle i').forEach(i => i.classList.remove('rotate-180'));
 
@@ -1550,7 +1461,6 @@
       });
     });
 
-    // Form Handling with WhatsApp Hand-off
     const appForm = document.getElementById('agentApplicationForm');
     const successState = document.getElementById('formSuccessState');
     const applicantNameDisplay = document.getElementById('applicantNameDisplay');
@@ -1571,46 +1481,43 @@
         return;
       }
 
-    applicantNameDisplay.textContent = name;
+      applicantNameDisplay.textContent = name;
 
-    // 1. Silent backup to your Google Sheet
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzZcvXzjHFeEc-oJXXyiVwPte9h6jTWzLhWgpCvN5l8SKNHqVRtnSIIsRhw1uu2Y01_/exec";
-    const leadPayload = {
-      fullName: name,
-      mobile: phone,
-      city: city,
-      qualification: education,
-      occupation: occupation,
-      notes: `Email: ${email} | Motivation: ${motivation}`
-    };
+      const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzZcvXzjHFeEc-oJXXyiVwPte9h6jTWzLhWgpCvN5l8SKNHqVRtnSIIsRhw1uu2Y01_/exec";
+      const leadPayload = {
+        fullName: name,
+        mobile: phone,
+        city: city,
+        qualification: education,
+        occupation: occupation,
+        notes: `Email: ${email} | Motivation: ${motivation}`
+      };
 
-    fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify(leadPayload)
+      fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(leadPayload)
+      });
+
+      const waMessage = `Hello Jayanthan Sir, I have submitted my agent application:%0A%0A` +
+        `*Name:* ${encodeURIComponent(name)}%0A` +
+        `*Phone:* ${encodeURIComponent(phone)}%0A` +
+        `*City:* ${encodeURIComponent(city)}%0A` +
+        `*Occupation:* ${encodeURIComponent(occupation)}%0A` +
+        `*Education:* ${encodeURIComponent(education)}%0A` +
+        `*Primary Goal:* ${encodeURIComponent(motivation)}%0A%0A` +
+        `Please guide me on the next IC-38 exam training batch.`;
+
+      const waUrl = `https://wa.me/917200170772?text=${waMessage}`;
+      whatsAppDirectAction.href = waUrl;
+
+      window.open(waUrl, '_blank');
+
+      appForm.classList.add('hidden');
+      successState.classList.remove('hidden');
     });
 
-    // 2. Prepare WhatsApp message with your number
-    const waMessage = `Hello Jayanthan Sir, I have submitted my agent application:%0A%0A` +
-      `*Name:* ${encodeURIComponent(name)}%0A` +
-      `*Phone:* ${encodeURIComponent(phone)}%0A` +
-      `*City:* ${encodeURIComponent(city)}%0A` +
-      `*Occupation:* ${encodeURIComponent(occupation)}%0A` +
-      `*Education:* ${encodeURIComponent(education)}%0A` +
-      `*Primary Goal:* ${encodeURIComponent(motivation)}%0A%0A` +
-      `Please guide me on the next IC-38 exam training batch.`;
-
-    const waUrl = `https://wa.me/917200170772?text=${waMessage}`;
-    whatsAppDirectAction.href = waUrl;
-
-    // Automatically open WhatsApp
-    window.open(waUrl, '_blank');
-
-    // 3. Update view
-    appForm.classList.add('hidden');
-    successState.classList.remove('hidden');
-  });
     function resetApplicationForm() {
       appForm.reset();
       appForm.classList.remove('hidden');
