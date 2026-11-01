@@ -67,22 +67,21 @@
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     }
   </style>
-</head>
-<body class="bg-brand-surface text-slate-800 antialiased font-sans flex flex-col min-h-screen">
-<!-- Navigation -->
+  <body class="bg-brand-surface text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- Main Sticky Navbar -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300 shadow-sm" id="mainNav">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 min-h-[4.5rem] py-2 flex items-center justify-between gap-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Brand Logo / Identity -->
-      <a href="#" class="flex items-center gap-2 sm:gap-3 min-w-0">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brand-navy to-brand-primary flex items-center justify-center text-amber-400 shadow-md shadow-brand-navy/20 shrink-0">
-          <i class="fa-solid fa-shield-halved text-lg sm:text-xl"></i>
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-navy to-brand-primary flex items-center justify-center text-amber-400 shadow-md shadow-brand-navy/20 shrink-0">
+          <i class="fa-solid fa-shield-halved text-xl"></i>
         </div>
-        <div class="min-w-0">
-          <div class="flex flex-wrap items-center gap-1.5">
-            <span class="font-serif text-base sm:text-xl font-extrabold tracking-tight text-brand-navy whitespace-nowrap">Jayanthan,</span>
-            <span class="text-[10px] sm:text-xs font-sans tracking-wider uppercase bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold whitespace-nowrap">DO</span>
-          </div>
-          <span class="block text-[11px] sm:text-xs font-medium text-slate-500 tracking-tight truncate">Elite Agency Team</span>
+        <div>
+          <span class="block font-serif text-lg sm:text-xl font-bold tracking-tight text-brand-navy">
+            Jayanthan, <span class="text-xs font-sans tracking-widest uppercase bg-amber-100 text-amber-800 px-2 py-0.5 rounded ml-1 font-semibold">Development Officer</span>
+          </span>
+          <span class="block text-xs font-medium text-slate-500 tracking-wide">Elite Agency Development Team</span>
         </div>
       </a>
 
@@ -98,18 +97,26 @@
       </div>
 
       <!-- Action Buttons -->
-      <div class="flex items-center gap-2 shrink-0">
+      <div class="flex items-center gap-3">
         <a href="https://wa.me/917200170772?text=Hello%20Jayanthan%20Sir%2C%20I%20am%20interested%20in%20becoming%20a%20Life%20Insurance%20Advisor.%20Please%20guide%20me." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 px-3.5 py-2 rounded-lg text-xs font-bold transition-all border border-emerald-200">
           <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
           <span>Direct WhatsApp</span>
         </a>
-        <a href="#apply" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-brand-navy to-brand-primary hover:from-brand-dark hover:to-brand-navy text-amber-300 font-bold px-3 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm shadow-md transition-all">
-          <span>Apply</span>
-          <i class="fa-solid fa-arrow-right text-[10px] sm:text-xs"></i>
+        <a href="#apply" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-navy to-brand-primary hover:from-brand-dark hover:to-brand-navy text-amber-300 font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm shadow-md shadow-brand-navy/25 hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+          <span>Apply to Join</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
       </div>
     </div>
   </nav>
+
+  <!-- New Batch Announcement Bar (Placed Below Navbar) -->
+  <div class="bg-gradient-to-r from-brand-navy via-brand-dark to-brand-navy text-amber-200 text-xs sm:text-sm py-2.5 px-4 border-b border-amber-500/20 text-center font-medium shadow-inner">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
+      <span class="bg-amber-500/20 text-amber-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-amber-400/30 shrink-0">NEW BATCH</span>
+      <span class="tracking-wide">Next IRDAI IC-38 Pre-Licensing Guidance Cohort starting soon. Limited seats available!</span>
+    </div>
+  </div>
 </a>
         <a href="#apply" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-navy to-brand-primary hover:from-brand-dark hover:to-brand-navy text-amber-300 font-bold px-5 py-2.5 rounded-xl text-sm shadow-md shadow-brand-navy/25 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
           <span>Apply to Join</span>
