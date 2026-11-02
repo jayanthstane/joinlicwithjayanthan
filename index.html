@@ -83,13 +83,13 @@
             <span class="font-serif text-base sm:text-xl font-bold tracking-tight text-brand-navy whitespace-nowrap">Jayanthan,</span>
             <span class="text-[10px] sm:text-xs font-sans tracking-wider uppercase bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-semibold whitespace-nowrap">Development Officer</span>
           </div>
-          <span class="block text-[11px] sm:text-xs font-medium text-slate-500 tracking-wide truncate">Elite Agency Team</span>
+          <span class="block text-[11px] sm:text-xs font-medium text-slate-500 tracking-wide truncate">Elite Agency Development Team</span>
         </div>
       </a>
 
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <button type="button" onclick="openAboutModal()" class="hover:text-brand-primary transition-colors cursor-pointer font-semibold">About Me</button>
+      <!-- Desktop Links (Visible on screens >= 768px) -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#leader-and-lic" class="hover:text-brand-primary transition-colors">About Me</a>
         <a href="#benefits" class="hover:text-brand-primary transition-colors">Why Join?</a>
         <a href="#calculator" class="hover:text-brand-primary transition-colors">Income Calculator</a>
         <a href="#milestones" class="hover:text-brand-primary transition-colors">Club Milestones</a>
@@ -99,7 +99,7 @@
         <a href="#faq" class="hover:text-brand-primary transition-colors">FAQ</a>
       </div>
 
-      <!-- Action Buttons -->
+      <!-- Action Buttons & Mobile Hamburger Button -->
       <div class="flex items-center gap-2.5 shrink-0">
         <a href="https://wa.me/917200170772?text=Hello%20Jayanthan%20Sir%2C%20I%20am%20interested%20in%20becoming%20a%20Life%20Insurance%20Advisor.%20Please%20guide%20me." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 px-3.5 py-2 rounded-lg text-xs font-bold transition-all border border-emerald-200">
           <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
@@ -109,10 +109,33 @@
           <span>Apply to Join</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
+        
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Toggle navigation menu" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-slate-700 hover:text-brand-primary hover:bg-slate-100 transition-colors">
+          <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <div id="mobileDropdown" class="hidden md:hidden border-t border-slate-200 bg-white/98 px-4 pt-3 pb-5 shadow-lg space-y-2 text-sm font-semibold text-slate-700">
+      <a href="#leader-and-lic" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-brand-primary transition-colors">About Me</a>
+      <a href="#benefits" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-brand-primary transition-colors">Why Join?</a>
+      <a href="#calculator" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-brand-primary transition-colors">Income Calculator</a>
+      <a href="#milestones" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-brand-primary transition-colors">Club Milestones</a>
+      <a href="#eligibility" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-brand-primary transition-colors">Who We Seek</a>
+      <a href="#process" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-brand-primary transition-colors">4-Step Licensing</a>
+      <a href="#testimonials" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-brand-primary transition-colors">Success Stories</a>
+      <a href="#faq" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-slate-100 hover:text-brand-primary transition-colors">FAQ</a>
+      <div class="pt-2 border-t border-slate-100 sm:hidden">
+        <a href="https://wa.me/917200170772?text=Hello%20Jayanthan%20Sir%2C%20I%20am%20interested%20in%20becoming%20a%20Life%20Insurance%20Advisor.%20Please%20guide%20me." target="_blank" class="flex items-center gap-2 py-2 px-3 rounded-lg text-emerald-700 bg-emerald-50 font-bold">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Direct WhatsApp</span>
+        </a>
       </div>
     </div>
   </nav>
-
+  
   <!-- New Batch Announcement Bar (Directly Under Navbar) -->
   <div class="relative z-40 bg-gradient-to-r from-slate-900 via-brand-dark to-slate-900 text-amber-200 text-xs sm:text-sm py-2.5 px-4 border-b border-amber-500/30 text-center font-medium shadow-md">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
@@ -1662,6 +1685,26 @@
       appForm.reset();
       appForm.classList.remove('hidden');
       successState.classList.add('hidden');
+    }
+    // Mobile Hamburger Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileDropdown');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isClosed = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.className = isClosed ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+      });
+
+      // Auto-close dropdown when a menu link is tapped
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.className = 'fa-solid fa-bars text-xl';
+        });
+      });
     }
   </script>
 </body>
