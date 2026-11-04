@@ -250,7 +250,7 @@
     // Fetch and Display Comments from Supabase on Page Load
     async function loadComments() {
       const { data, error } = await supabaseClient
-        .from('comments')
+        .from('Comments')
         .select('*')
         .eq('blog_slug', blogSlug)
         .order('created_at', { ascending: false });
@@ -298,7 +298,7 @@
         submitBtn.innerText = 'Posting...';
 
         const { error } = await supabaseClient
-          .from('comments')
+          .from('Comments')
           .insert([{ blog_slug: blogSlug, author_name: name, comment_text: text }]);
 
         if (error) {
