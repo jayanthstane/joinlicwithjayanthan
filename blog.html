@@ -298,7 +298,7 @@
         submitBtn.innerText = 'Posting...';
 
         const { error } = await supabaseClient
-          .from('Comments')
+          .from('comments')
           .insert([{ blog_slug: blogSlug, author_name: name, comment_text: text }]);
 
         if (error) {
