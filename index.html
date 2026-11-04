@@ -66,6 +66,43 @@
       cursor: pointer;
       box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
     }
+
+    /* Mobile Sidebar Navigation Styles */
+    @media screen and (max-width: 768px) {
+      .sidebar-menu {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100vh;
+        background-color: #0B192C;
+        color: #fff;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        transition: right 0.3s ease-in-out;
+        z-index: 1100;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .sidebar-menu.open {
+        right: 0;
+      }
+      .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1050;
+      }
+      .sidebar-overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   </style>
 </head>
 <body class="bg-brand-surface text-slate-800 antialiased font-sans flex flex-col min-h-screen">
@@ -73,19 +110,27 @@
   <!-- Main Sticky Navbar -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300 shadow-sm" id="mainNav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4.5rem] py-2 flex items-center justify-between gap-2">
-      <!-- Brand Logo / Identity -->
-      <a href="#" class="flex items-center gap-2.5 sm:gap-3 min-w-0">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brand-navy to-brand-primary flex items-center justify-center text-amber-400 shadow-md shadow-brand-navy/20 shrink-0">
-          <i class="fa-solid fa-shield-halved text-lg sm:text-xl"></i>
-        </div>
-        <div class="min-w-0">
-          <div class="flex flex-wrap items-center gap-1.5">
-            <span class="font-serif text-base sm:text-xl font-bold tracking-tight text-brand-navy whitespace-nowrap">Jayanthan,</span>
-            <span class="text-[10px] sm:text-xs font-sans tracking-wider uppercase bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-semibold whitespace-nowrap">Development Officer</span>
+      
+      <!-- Brand Logo / Identity (Desktop & Mobile Unified Header) -->
+      <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+        <!-- Mobile Hamburger Button next to logo/name -->
+        <button type="button" class="md:hidden text-brand-navy hover:text-brand-primary p-1 text-xl focus:outline-none" id="mobileMenuToggle" aria-label="Open Mobile Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a href="#" class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brand-navy to-brand-primary flex items-center justify-center text-amber-400 shadow-md shadow-brand-navy/20 shrink-0">
+            <i class="fa-solid fa-shield-halved text-lg sm:text-xl"></i>
           </div>
-          <span class="block text-[11px] sm:text-xs font-medium text-slate-500 tracking-wide truncate">Elite Agency Team</span>
-        </div>
-      </a>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <span class="font-serif text-base sm:text-xl font-bold tracking-tight text-brand-navy whitespace-nowrap">Jayanthan,</span>
+              <span class="text-[10px] sm:text-xs font-sans tracking-wider uppercase bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-semibold whitespace-nowrap">Development Officer</span>
+            </div>
+            <span class="block text-[11px] sm:text-xs font-medium text-slate-500 tracking-wide truncate">Elite Agency Team</span>
+          </div>
+        </a>
+      </div>
 
       <!-- Desktop Links -->
       <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
@@ -110,6 +155,33 @@
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
       </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Slide-out Sidebar Drawer & Overlay -->
+  <div class="sidebar-overlay md:hidden" id="sidebarOverlay"></div>
+  <nav class="sidebar-menu md:hidden flex flex-col justify-between" id="sidebarMenu">
+    <div>
+      <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+        <span class="text-xs uppercase tracking-wider text-amber-400 font-bold">Quick Navigation</span>
+        <button type="button" class="text-white text-2xl hover:text-amber-400 focus:outline-none" id="closeSidebarBtn" aria-label="Close Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="space-y-4 text-sm font-semibold">
+        <li><button type="button" onclick="closeMobileMenu(); openAboutModal();" class="hover:text-amber-400 transition-colors text-left w-full">About Jayanthan</button></li>
+        <li><a href="#benefits" onclick="closeMobileMenu()" class="block hover:text-amber-400 transition-colors">Advisor Benefits</a></li>
+        <li><a href="#calculator" onclick="closeMobileMenu()" class="block hover:text-amber-400 transition-colors">Income Calculator</a></li>
+        <li><a href="#milestones" onclick="closeMobileMenu()" class="block hover:text-amber-400 transition-colors">Club Milestones</a></li>
+        <li><a href="#eligibility" onclick="closeMobileMenu()" class="block hover:text-amber-400 transition-colors">Who We Seek</a></li>
+        <li><a href="#process" onclick="closeMobileMenu()" class="block hover:text-amber-400 transition-colors">4-Step Licensing</a></li>
+        <li><a href="#testimonials" onclick="closeMobileMenu()" class="block hover:text-amber-400 transition-colors">Success Stories</a></li>
+        <li><a href="#faq" onclick="closeMobileMenu()" class="block hover:text-amber-400 transition-colors">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="pt-6 border-t border-white/10 text-xs text-slate-400">
+      <p class="text-white font-semibold mb-1">Direct Line:</p>
+      <p>+91 72001 70772</p>
     </div>
   </nav>
 
@@ -1205,6 +1277,32 @@
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+    // Mobile Sidebar Toggle Logic
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+    const sidebarMenu = document.getElementById('sidebarMenu');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    function toggleMobileMenu() {
+      if (sidebarMenu && sidebarOverlay) {
+        sidebarMenu.classList.toggle('open');
+        sidebarOverlay.classList.toggle('open');
+        document.body.style.overflow = sidebarMenu.classList.contains('open') ? 'hidden' : '';
+      }
+    }
+
+    function closeMobileMenu() {
+      if (sidebarMenu && sidebarOverlay) {
+        sidebarMenu.classList.remove('open');
+        sidebarOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeMobileMenu);
+    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeMobileMenu);
+
     function openAboutModal() {
       const modal = document.getElementById('aboutMeModal');
       if (modal) {
@@ -1231,6 +1329,7 @@
     window.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeAboutModal();
+        closeMobileMenu();
       }
     });
 
